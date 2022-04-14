@@ -1,0 +1,131 @@
+.header {
+    background-image: linear-gradient(to right,rgb(0 0 0 / .8 ), rgb(0 0 0  / .7)), url(../public/img/header.jpg);
+    padding: 5rem 0;
+    background-size: cover;
+    background-position: 50%;
+    position: relative
+
+
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+@media (min-width:768px) {
+    .barra {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navegacion {
+    display: flex;
+    margin-top: 5rem;
+    gap: 2rem;  
+}
+@media(min-width:768px) {
+    .navegacion {
+        margin-top: 0;
+    }
+}
+
+.navegacion a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .5rem;
+    transition-property: background-color;
+    transition-duration: .3s;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+}
+.navegacion a:hover {
+    background-color: var(--primary);
+    
+
+}
+
+.modelo {
+    color: var(--blanco);
+    margin-top: 5rem;
+    text-align: center;
+}
+@media (min-width:768px) {
+    .modelo{
+    text-align: left;
+    width: 50%;
+}
+}
+.modelo h1 {
+    font-size: 8rem;
+
+}
+.modelo p:first-of-type {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: 2.2rem;
+}
+.precio {
+    font-size: 6rem;
+    color: var(--primary);
+    font-weight:900;
+    line-height: 0;
+}
+
+.enlace {
+   
+    color: white;
+    border: 2px solid var(--primary);
+    padding: 1rem 1rem;
+    text-decoration: none;
+    text-align: center;
+
+    font-weight: 900;
+    font-size: medium;
+    text-transform: uppercase;
+}
+.enlace:hover {
+    background-color: var(--primary);
+    color: white;
+    transition: all;
+    transition-duration: .3s;
+    border-color: black;
+}
+
+.guitarra {
+    display: none;
+}
+@media (min-width:768px) {
+    .guitarra {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        animation-name: mostrarimagen;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+
+      
+    }
+}
+
+@keyframes mostrarimagen {
+    0%{
+            opacity: 0;
+            transform: translateX(-10rem);
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
